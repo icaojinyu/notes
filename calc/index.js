@@ -26,3 +26,6 @@ function quickSort(arr) {
   }
   return quickSort(left).concat(base, quickSort(right));
 }
+
+let arr = [1,6,5,4,5,2,6,3];
+console.log(quickSort(arr));
