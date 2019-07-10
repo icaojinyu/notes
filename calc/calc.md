@@ -1,4 +1,7 @@
-// 冒泡排序
+## 面试算法
+
+#### 1. 冒泡排序
+```js
 function bubbleSort(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - 1 - i; j++) {
@@ -11,8 +14,10 @@ function bubbleSort(arr) {
   }
   return arr;
 }
+```
 
-// 快速排序
+#### 2. 快速排序
+```js
 function quickSort(arr) {
   if (arr.length <= 1) return arr;
   let mid = ~~(arr.length / 2);
@@ -26,6 +31,4 @@ function quickSort(arr) {
   }
   return quickSort(left).concat(base, quickSort(right));
 }
-
-let arr = [1,6,5,4,5,2,6,3];
-console.log(quickSort(arr));
+```
