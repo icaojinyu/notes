@@ -1,7 +1,4 @@
-## 面试算法
-
-#### 1. 冒泡排序
-```js
+// 冒泡排序
 function bubbleSort(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - 1 - i; j++) {
@@ -14,14 +11,14 @@ function bubbleSort(arr) {
   }
   return arr;
 }
-```
 
-#### 2. 快速排序
-```js
+// 快速排序
 function quickSort(arr) {
   if (arr.length <= 1) return arr;
   let mid = ~~(arr.length / 2);
-  let base = arr.splice(mid, 1)[0], left = [], right = [];
+  let base = arr.splice(mid, 1)[0];
+  let left = [], right = [];
+
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] < base) {
       left.push(arr[i]);
@@ -31,4 +28,7 @@ function quickSort(arr) {
   }
   return quickSort(left).concat(base, quickSort(right));
 }
-```
+
+
+let arr = [3, 7, 1, 5, 9];
+console.log(quickSort(arr));
